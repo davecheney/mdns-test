@@ -1,0 +1,12 @@
+--- a/src/pkg/net/sock.go	Thu Feb 17 17:14:50 2011 -0500
++++ b/src/pkg/net/sock.go	Sat Feb 19 10:37:24 2011 +1100
+@@ -35,6 +35,9 @@
+ 	// Allow reuse of recently-used addresses.
+ 	syscall.SetsockoptInt(s, syscall.SOL_SOCKET, syscall.SO_REUSEADDR, 1)
+ 
++	// Allow reuse of already bound port.
++	syscall.SetsockoptInt(s, syscall.SOL_SOCKET, syscall.SO_REUSEPORT, 1)
++
+ 	// Allow broadcast.
+ 	syscall.SetsockoptInt(s, syscall.SOL_SOCKET, syscall.SO_BROADCAST, 1)
+
