@@ -10,7 +10,7 @@ If you are trying to run this code on OS X, you will need to patch your Go insta
 
     patch -p0 $GOROOT/src/pkg/net/sock.go < sock.patch 
 
-then rebuilt
+then rebuild your Go installation
 
     cd $GOROOT/src && ./all.bash
 
