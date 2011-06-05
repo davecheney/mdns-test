@@ -3,7 +3,7 @@ package main
 import (
 	"net"
 	"log"
-	godns "github.com/miekg/godns"
+	dns "github.com/davecheney/dns"
 )
 
 func main() {
@@ -27,7 +27,7 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		msg := &godns.Msg{}
+		msg := &dns.Msg{}
 		msg.Unpack(buff[:read])
 		log.Println(msg.String())
 	}
