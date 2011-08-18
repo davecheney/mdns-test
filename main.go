@@ -3,7 +3,7 @@ package main
 import (
 	"net"
 	"log"
-	dns "github.com/davecheney/dns"
+	dns "github.com/miekg/godns"
 )
 
 func main() {
